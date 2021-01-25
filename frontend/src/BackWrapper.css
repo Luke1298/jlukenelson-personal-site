@@ -1,0 +1,6 @@
+.back-button{
+  font-size: calc(10px + 2vmin);
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}

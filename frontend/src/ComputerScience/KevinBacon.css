@@ -1,0 +1,77 @@
+.kevin-bacon-home-page {
+  padding: 0px 50px;
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: #E8E8EC;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.kevin-bacon-title{
+  margin-top: 15px;
+  font-size: 24px;
+  text-align: center;
+  color: #E8E8EC;
+}
+
+.actor-selector {
+  width: 400px;
+  color: #282c34;
+  position: absolute;
+  top: 100px;
+}
+
+.graph-outer{
+  margin-top: 115px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.bacon-number-title{
+  text-align: center;
+}
+
+.graph{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.graph-actor{
+  color: #E8E8EC;
+  border: #E8E8EC 3px solid;
+  margin:15px 3px;
+  padding: 5px;
+  line-height: 40px;
+}
+
+.graph-movie{
+    color: #282c34;
+    width: auto;
+    padding: 0px 5px;
+    line-height:50px;
+    position:relative;
+    background: #E8E8EC;
+    text-align:center;
+    margin:15px 3px;
+    margin-right: 25px;
+}
+.graph-movie:after, .graph-movie:before{
+    content:"";
+    position:absolute;
+    width:20px;
+    height:50%;
+    left:100%;
+}
+.graph-movie:after{
+    bottom:0;
+    background: linear-gradient(to right bottom, #E8E8EC 50%, transparent 50%);
+}
+.graph-movie:before{
+    top:0;
+    background: linear-gradient(to right top, #E8E8EC 50%, transparent 50%);
+}

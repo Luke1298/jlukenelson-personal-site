@@ -1,0 +1,81 @@
+.about-page {
+  background-color: #E8E8EC;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #282c34;
+  height: 100vh;
+}
+.about-page-title{
+  margin-top: 15px;
+}
+
+.color-link {
+  color: #282c34;
+}
+
+.about-page-content {
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  margin: 15px;
+  margin-top: 5px;
+  flex-direction: row;
+}
+
+.linkedin-shot{
+  height: max-content;
+  width: max-content;
+}
+
+.about-page-bio-short-title {
+  font-size: calc(5px + 2.5vmin);
+  text-align: center;
+}
+
+.left{
+  color: #282c34;
+  display: flex;
+  width: 100%;
+  max-width: 400px;
+  flex-direction: column;
+  color: #282c34;
+}
+
+.left-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.left-links > a{
+  color: inherit;
+}
+
+.right{
+  flex-grow: 1;
+  /*display: flex;*/
+  font-size: 2.5vmin;
+  margin-left: 10px;
+}
+
+.right > p{
+  margin: 7px 0px;
+}
+
+@media only screen and (max-width: 800px){
+  .about-page-content{
+    flex-direction: column;
+  }
+  .linkedin-shot{
+    align-self: center;
+  }
+  .right {
+    margin-left: 10px;
+  }
+  .left {
+    align-self: center;
+  }
+}

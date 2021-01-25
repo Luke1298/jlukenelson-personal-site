@@ -1,0 +1,80 @@
+.home {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.about {
+  position: absolute;
+  bottom: 0px;
+}
+
+.right-about {
+  left: calc(50% + 0px);
+}
+
+.left-about {
+  right: calc(50% + 1px);
+}
+
+
+.passions {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.math-home {
+  background-color: #E8E8EC;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #282c34;
+  width: 50%;
+}
+
+.computers-home {
+  background-color: #282c34;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #E8E8EC;
+  width: 50%;
+}
+
+.home-link {
+  color: inherit;
+  animation: fadeIn ease 2.5s;
+  -webkit-animation: fadeIn ease 2.5s;
+  -moz-animation: fadeIn ease 2.5s;
+  -o-animation: fadeIn ease 2.5s;
+  -ms-animation: fadeIn ease 2.5s;
+}
+
+.small-link {
+  color: inherit;
+  font-size: calc(10px + 0.5vmin);
+}
+@keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}

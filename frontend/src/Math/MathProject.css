@@ -1,0 +1,59 @@
+.math-project-home-page {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  color: #E8E8EC;
+  min-height: 100vh;
+}
+
+.darkTheme > * {
+  background-color: #282c34;
+}
+
+.ace-monokai {
+  background-color: #282c34;
+}
+
+.ace_active-line{
+  background-color: #282c34 !important;
+}
+
+.ace_gutter-cell{
+  background-color: #323842;
+}
+
+.ace_folding-enabled > .ace_gutter-cell {
+  background-color: #323842 !important;
+}
+
+.math-project-home-page a {
+  color: #E8E8EC;
+}
+
+.math-project-home-page video{
+  width: 100% !important;
+}
+
+.ace_cursor {
+  display: none !important;
+}
+
+.ace_bracket {
+  display: none !important;
+}
+
+.ace_print-margin{
+  display: none !important;
+}
+
+.math-project-title{
+  margin-top: 15px;
+  font-size: 32px;
+  text-align: center;
+  color: #E8E8EC;
+}
+
+.loading-state{
+  color: #E8E8EC;
+  font-size: 16px;
+}
