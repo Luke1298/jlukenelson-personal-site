@@ -24,7 +24,7 @@ function About() {
 
              <p> My wife and I were married in the summer of 2020. When I'm not coding you'll find me cooking with her. We try a new recipe a couple times every week.</p>
              <div className="about-page-bio-short-title">Reach Out</div>
-             <p> Email me anytime at: <a className="color-link" href="mailto:luke@jlukenelson.com">luke@jlukenelson.com</a></p>
+             <p> Email me anytime at: <a className="color-link" href="mailto:lukenelson1298@gmail.com">lukenelson1298@gmail.com</a></p>
           </div>
         </div>
       </div>

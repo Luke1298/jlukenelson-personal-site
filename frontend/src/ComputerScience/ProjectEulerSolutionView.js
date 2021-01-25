@@ -59,7 +59,7 @@ class ProjectEulerSolutionView extends Component<*, State> {
               <p className="project-euler-need-to-understand-first-paragraph">
                 Project Euler has asked that participants not share solutions past
                 the 100th problem. If you are viewing this page for the sake of the
-                answer please email me at <a href="mailto:luke@jlukenelson.com">luke@jlukenelson.com</a>
+                answer please email me at <a href="mailto:lukenelson1298@gmail.com">lukenelson1298@gmail.com</a>
                 . I'd love to help you learn how to solve this problem for yourself.
               </p>
               <p>
