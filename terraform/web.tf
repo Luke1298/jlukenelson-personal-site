@@ -28,27 +28,6 @@ resource "aws_codebuild_project" "jln_web_codebuild" {
   }
 }
 
-resource "aws_codebuild_webhook" "jln_web_codebuild_webhook" {
-  project_name = aws_codebuild_project.jln_web_codebuild.name
-
-  filter_group {
-    filter {
-      type    = "EVENT"
-      pattern = "PUSH"
-    }
-
-    filter {
-      type    = "HEAD_REF"
-      pattern = "main"
-    }
-
-    filter {
-      type    = "FILE_PATH"
-      pattern = "^frontend\\/.*"
-    }
-  }
-}
-
 resource "aws_s3_bucket" "j_luke_nelson_site" {
   bucket = "j-luke-nelson-personal-site"
   acl    = "private"
