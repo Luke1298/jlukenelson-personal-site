@@ -24,7 +24,7 @@ resource "aws_codebuild_project" "jln_web_codebuild" {
     type      = "GITHUB"
     location  = "https://github.com/Luke1298/jlukenelson-personal-site.git"
     git_clone_depth = 1
-    buildspec = "web/buildspec.yml"
+    buildspec = "frontend/buildspec.yml"
   }
 }
 
