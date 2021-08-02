@@ -31,7 +31,7 @@ resource "aws_cloudfront_distribution" "web_s3_distribution" {
   }
 
   default_cache_behavior {
-    allowed_methods  = ["GET", "HEAD", "POST", "PUT"]
+    allowed_methods  = ["GET", "HEAD", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"]
     cached_methods   = ["GET", "HEAD"]
     target_origin_id = "S3-${aws_s3_bucket.j_luke_nelson_site.bucket}"
     trusted_signers  = ["self"]
