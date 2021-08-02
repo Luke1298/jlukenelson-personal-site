@@ -1,3 +1,24 @@
+### Website ###
+
+resource "aws_route53_zone" "main" {
+  name = "jlukenelson.com."
+}
+
+resource "aws_route53_record" "jln_web_cloudfront" {
+  for_each = toset(var.domain_names)
+  zone_id = aws_route53_zone.main.zone_id
+  name = each.key
+  type = "A"
+
+  alias {
+    name       = aws_cloudfront_distribution.web_s3_distribution.domain_name
+    zone_id    = aws_cloudfront_distribution.web_s3_distribution.hosted_zone_id
+    evaluate_target_health = false
+  }
+}
+
+### Build & Deploy Pipeline ###
+
 resource "aws_codebuild_project" "jln_web_codebuild" {
   name          = "jlukenelson-dot-com"
   service_role  = aws_iam_role.default.arn
