@@ -1,3 +1,7 @@
+locals {
+  bucket_name = "j-luke-nelson-personal-site"
+}
+
 resource "aws_cloudfront_origin_access_identity" "default" {
   comment = "Cloudfront Origin Access Identity for user images distribution"
 }
@@ -7,7 +11,7 @@ data "aws_iam_policy_document" "cloudfront_distro" {
     sid = "S3GetObjectForCloudFront"
 
     actions   = ["s3:GetObject"]
-    resources = ["arn:aws:s3:::${var.bucket_name}/*"]
+    resources = ["arn:aws:s3:::${local.bucket_name}/*"]
 
     principals {
       type        = "AWS"
@@ -19,7 +23,7 @@ data "aws_iam_policy_document" "cloudfront_distro" {
     sid = "S3ListBucketForCloudFront"
 
     actions   = ["s3:ListBucket"]
-    resources = ["arn:aws:s3:::${var.bucket_name}"]
+    resources = ["arn:aws:s3:::${local.bucket_name}"]
 
     principals {
       type        = "AWS"
@@ -29,7 +33,7 @@ data "aws_iam_policy_document" "cloudfront_distro" {
 }
 
 resource "aws_s3_bucket" "j_luke_nelson_site" {
-  bucket = "j-luke-nelson-personal-site"
+  bucket = local.bucket_name
   acl    = "private"
   policy        = data.aws_iam_policy_document.cloudfront_distro.json
   cors_rule {
