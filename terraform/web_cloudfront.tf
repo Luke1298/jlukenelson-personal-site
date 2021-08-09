@@ -36,7 +36,7 @@ resource "aws_cloudfront_distribution" "web_s3_distribution" {
     allowed_methods  = ["GET", "HEAD", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"]
     cached_methods   = ["GET", "HEAD"]
     target_origin_id = "S3-${aws_s3_bucket.j_luke_nelson_site.bucket}"
-    trusted_signers  = ["self"]
+    trusted_signers  = null
 
     forwarded_values {
       query_string = false
