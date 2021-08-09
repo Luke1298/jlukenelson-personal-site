@@ -27,7 +27,9 @@ resource "aws_cloudfront_distribution" "web_s3_distribution" {
 
   viewer_certificate {
     minimum_protocol_version       = "TLSv1"
-    cloudfront_default_certificate = true
+    acm_certificate_arn = var.ssl_certificate
+    cloudfront_default_certificate = false
+    ssl_support_method = "sni-only"
   }
 
   default_cache_behavior {
