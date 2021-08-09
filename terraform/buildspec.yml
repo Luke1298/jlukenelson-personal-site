@@ -22,4 +22,3 @@ phases:
     commands:
       - aws s3 mv terraform.tfstate s3://$TERRAFORM_STATE_BUCKET/terraform.tfstate
       - echo "Terraform completed!"
-#Test
