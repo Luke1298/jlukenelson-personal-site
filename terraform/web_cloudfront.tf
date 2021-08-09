@@ -2,6 +2,45 @@ resource "aws_cloudfront_origin_access_identity" "default" {
   comment = "Cloudfront Origin Access Identity for user images distribution"
 }
 
+data "aws_iam_policy_document" "cloudfront_distro" {
+  statement {
+    sid = "S3GetObjectForCloudFront"
+
+    actions   = ["s3:GetObject"]
+    resources = ["arn:aws:s3:::${var.bucket_name}/*"]
+
+    principals {
+      type        = "AWS"
+      identifiers = [var.origin_access_identity.iam_arn]
+    }
+  }
+
+  statement {
+    sid = "S3ListBucketForCloudFront"
+
+    actions   = ["s3:ListBucket"]
+    resources = ["arn:aws:s3:::${var.bucket_name}"]
+
+    principals {
+      type        = "AWS"
+      identifiers = [var.origin_access_identity.iam_arn]
+    }
+  }
+}
+
+resource "aws_s3_bucket" "j_luke_nelson_site" {
+  bucket = "j-luke-nelson-personal-site"
+  acl    = "private"
+  policy        = data.aws_iam_policy_document.cloudfront_distro.json
+  cors_rule {
+    allowed_headers = ["*"]
+    allowed_methods = ["GET", "HEAD", "POST", "PUT"]
+    allowed_origins = ["*"]
+    max_age_seconds = 3000
+  }
+}
+
+
 resource "aws_cloudfront_distribution" "web_s3_distribution" {
   enabled             = true
   is_ipv6_enabled     = true

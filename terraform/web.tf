@@ -49,11 +49,6 @@ resource "aws_codebuild_project" "jln_web_codebuild" {
   }
 }
 
-resource "aws_s3_bucket" "j_luke_nelson_site" {
-  bucket = "j-luke-nelson-personal-site"
-  acl    = "private"
-}
-
 data "aws_iam_policy_document" "front_end_post_build_lambda_role" {
   statement {
     sid = "1"
