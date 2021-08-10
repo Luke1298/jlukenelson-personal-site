@@ -15,7 +15,7 @@ data "aws_iam_policy_document" "cloudfront_distro" {
 
     principals {
       type        = "AWS"
-      identifiers = [var.origin_access_identity.iam_arn]
+      identifiers = [aws_cloudfront_origin_access_identity.default.iam_arn]
     }
   }
 
@@ -27,7 +27,7 @@ data "aws_iam_policy_document" "cloudfront_distro" {
 
     principals {
       type        = "AWS"
-      identifiers = [var.origin_access_identity.iam_arn]
+      identifiers = [aws_cloudfront_origin_access_identity.default.iam_arn]
     }
   }
 }
