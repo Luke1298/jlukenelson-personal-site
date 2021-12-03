@@ -48,7 +48,6 @@ resource "aws_s3_bucket" "j_luke_nelson_site" {
 resource "aws_cloudfront_distribution" "web_s3_distribution" {
   enabled             = true
   is_ipv6_enabled     = true
-  compress            = true
   price_class         = "PriceClass_All"
   aliases             = var.domain_names
   default_root_object = "index.html"
@@ -95,6 +94,7 @@ resource "aws_cloudfront_distribution" "web_s3_distribution" {
     default_ttl            = 60
     min_ttl                = 0
     max_ttl                = 86400
+    compress               = true
   }
 
   restrictions {
