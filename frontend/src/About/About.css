@@ -4,9 +4,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 1rem);
   color: #282c34;
-  height: 100vh;
+  height: calc(max(100vh, 100%));
 }
 .about-page-title{
   margin-top: 15px;
@@ -32,7 +32,7 @@
 }
 
 .about-page-bio-short-title {
-  font-size: calc(5px + 2.5vmin);
+  font-size: calc(5px + 1.5rem);
   text-align: center;
 }
 
@@ -57,24 +57,22 @@
 
 .right{
   flex-grow: 1;
+  background-color: #E8E8EC;
+  padding: 0px 20px 0px 30px;
   /*display: flex;*/
-  font-size: 2.5vmin;
-  margin-left: 10px;
+  font-size: 1.5rem;
 }
 
 .right > p{
   margin: 7px 0px;
 }
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 1000px){
   .about-page-content{
     flex-direction: column;
   }
   .linkedin-shot{
     align-self: center;
-  }
-  .right {
-    margin-left: 10px;
   }
   .left {
     align-self: center;

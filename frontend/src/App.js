@@ -64,17 +64,17 @@ function App() {
               <MathProject />
             </BackWrapper>
           </Route>
-          <Route path="/computer-science">
+          <Route path="/j-luke-nelson-computer-science-showcase">
             <BackWrapper backPath="/" iconColor="#E8E8EC">
               <ComputerScienceHome />
             </BackWrapper>
           </Route>
-          <Route path="/math">
+          <Route path="/j-luke-nelson-math-showcase">
             <BackWrapper backPath="/" iconColor="#282c34">
               <MathHome />
             </BackWrapper>
           </Route>
-          <Route path="/about">
+          <Route path="/about-j-luke-nelson">
             <BackWrapper backPath="/" iconColor="#282c34">
               <About />
             </BackWrapper>
@@ -93,8 +93,8 @@ function Home() {
     <div className="home">
       <div className="passions">
         <div className="math-home">
-          <Link to="/math" className="home-link">
-            Math
+          <Link to="/j-luke-nelson-math-showcase" className="home-link">
+            <h2> Math </h2>
           </Link>
           <div className="about left-about">
             <Link to="/about" className="small-link home-link">
@@ -103,11 +103,11 @@ function Home() {
           </div>
         </div>
         <div className="computers-home">
-          <Link to="/computer-science" className="home-link">
-            Computer Science
+          <Link to="/j-luke-nelson-computer-science-showcase" className="home-link">
+            <h2> Computer Science </h2>
           </Link>
           <div className="about right-about">
-            <Link to="/about" className="small-link home-link">
+            <Link to="/about-j-luke-nelson" className="small-link home-link">
               J. Luke Nelson
             </Link>
           </div>
