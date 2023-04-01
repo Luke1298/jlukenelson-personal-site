@@ -26,8 +26,9 @@
 }
 
 .linkedin-shot{
-  height: max-content;
-  width: max-content;
+  height: 400px;
+  width: 400px;
+  display: inline-block;
 }
 
 .about-page-bio-short-title {
