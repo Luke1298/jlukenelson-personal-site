@@ -6,7 +6,8 @@
   justify-content: center;
   font-size: calc(10px + 1rem);
   color: #282c34;
-  height: calc(max(100vh, 100%));
+  min-height: 100vh;
+  height: 100%;
 }
 .about-page-title{
   margin-top: 15px;
