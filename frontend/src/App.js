@@ -97,7 +97,7 @@ function Home() {
             <h2> Math </h2>
           </Link>
           <div className="about left-about">
-            <Link to="/about" className="small-link home-link">
+            <Link to="/about-j-luke-nelson" className="small-link home-link">
               About
             </Link>
           </div>
