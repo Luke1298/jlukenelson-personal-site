@@ -50,7 +50,7 @@ class ProjectEulerSolutionView extends Component<*, State> {
               Project Euler has asked that participants not share solutions past
               the 100th problem. If you are viewing this page to evaluate his
               problem solving skills email him at <a href="mailto:lukenelson1298@gmail.com">lukenelson1298@gmail.com</a>
-              and at his disgression he can discuss how he solved these problems.
+               and at his disgression he can discuss how he solved these problems.
             </p>
           </div>
         </div>
