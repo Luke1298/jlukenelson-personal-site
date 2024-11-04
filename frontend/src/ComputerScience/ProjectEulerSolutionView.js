@@ -40,23 +40,21 @@ class ProjectEulerSolutionView extends Component<*, State> {
       return(ProjectEulerSolutionViewInternal(this.props.match.params.problemId));
     }
     else {
-      else {
-        return(
-          <div className="project-euler-solution-page">
-            <div className="project-euler-solution-title">
-              {this.props.match.params.problemId}
-            </div>
-            <div className="project-euler-need-to-understand">
-              <p className="project-euler-need-to-understand-first-paragraph">
-                Project Euler has asked that participants not share solutions past
-                the 100th problem. If you are viewing this page to evaluate his
-                problem solving skills email him at <a href="mailto:lukenelson1298@gmail.com">lukenelson1298@gmail.com</a>
-                and at his disgression he can discuss how he solved these problems.
-              </p>
-            </div>
+      return(
+        <div className="project-euler-solution-page">
+          <div className="project-euler-solution-title">
+            {this.props.match.params.problemId}
           </div>
-        )
-      }
+          <div className="project-euler-need-to-understand">
+            <p className="project-euler-need-to-understand-first-paragraph">
+              Project Euler has asked that participants not share solutions past
+              the 100th problem. If you are viewing this page to evaluate his
+              problem solving skills email him at <a href="mailto:lukenelson1298@gmail.com">lukenelson1298@gmail.com</a>
+              and at his disgression he can discuss how he solved these problems.
+            </p>
+          </div>
+        </div>
+      )
     }
   }
 };

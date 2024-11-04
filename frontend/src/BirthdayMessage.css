@@ -1,0 +1,36 @@
+.birthday-message {
+  background: linear-gradient(135deg, #ff6b6b, #f0a500);
+  color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  max-width: 400px;
+  margin: 50px auto;
+  font-family: 'Arial', sans-serif;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+.birthday-message h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.birthday-message p {
+  font-size: 1.2rem;
+  margin-top: 0;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

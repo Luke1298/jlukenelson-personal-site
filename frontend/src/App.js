@@ -11,6 +11,7 @@ import KevinBacon from "./ComputerScience/KevinBacon";
 import YelpHelp from "./ComputerScience/YelpHelp";
 import MathProject from "./Math/MathProject";
 import BackWrapper from "./BackWrapper";
+import BirthdayMessage from "./BirthdayMessage";
 import {
   BrowserRouter as Router,
   Switch,
@@ -78,6 +79,9 @@ function App() {
             <BackWrapper backPath="/" iconColor="#282c34">
               <About />
             </BackWrapper>
+          </Route>
+          <Route path="/happy-18th-bday-lily">
+            <BirthdayMessage />
           </Route>
           <Route path="/">
             <Home />
