@@ -19,12 +19,12 @@ function BirthdayMessage() {
         <p>Welcome to adulthood! May this year be filled with excitement, joy, and wonderful surprises! 🎈🎂</p>
         <p>
           I’m so grateful that my kids have you as their aunt. You’re an
-          incredible example to them of kindness, strength, and joy, and I know
-          they look up to you in many ways. Thank you for being there for them
+          incredible example to them of dilegence, basketball skill, and determination. I know
+          they look up to you in many ways. Thank you for being there for them and
           being willing to play with Eden and to hold baby Conley. Here’s to all
           the amazing adventures awaiting you this year and beyond.
         </p>
-
+        <p>&mdash; J Luke Nelson</p>
       </div>
     </div>
   );
